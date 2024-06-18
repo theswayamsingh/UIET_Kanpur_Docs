@@ -33,7 +33,7 @@ class _SignInScreen extends State<SignInScreen> {
           var databaseRef = FirebaseDatabase.instanceFor(
                   app: Firebase.app(),
                   databaseURL:
-                      'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                      <databaseURL>)
               .ref('Users')
               .child(auth.currentUser!.uid);
           var dataSnapshot = await databaseRef.get();
