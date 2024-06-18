@@ -57,7 +57,7 @@ class _FeedbackScreen extends State<FeedbackScreen> {
         var databaseRef = FirebaseDatabase.instanceFor(
                 app: Firebase.app(),
                 databaseURL:
-                    'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                    <databaseURL>)
             .ref('Feedback/${auth.currentUser!.uid}');
         await databaseRef.update({key: value});
         ScaffoldMessenger.of(context).showSnackBar(
