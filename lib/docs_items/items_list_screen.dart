@@ -229,7 +229,7 @@ class _ItemsListScreenState extends State<ItemsListScreen> {
                   ),
                 ),
                 SizedBox(
-                  height: screenHeight * .75,
+                  height: screenHeight * .73,
                   child: FutureBuilder(
                       future: loadFiles(),
                       builder: (context, snapshot) {
