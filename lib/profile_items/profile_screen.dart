@@ -28,7 +28,7 @@ class _ProfileScreen extends State<ProfileScreen> {
       var databaseRef = FirebaseDatabase.instanceFor(
               app: Firebase.app(),
               databaseURL:
-                  'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                  <databaseURL>)
           .ref('Users')
           .child(user!.uid);
       var dataSnapshot = await databaseRef.get();
