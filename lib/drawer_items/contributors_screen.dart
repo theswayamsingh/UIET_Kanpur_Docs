@@ -37,16 +37,16 @@ class ContributorsScreen extends StatelessWidget {
         String url = await fileRef.items[0].getDownloadURL();
         File file = await DefaultCacheManager().getSingleFile(url);
         var photo = CircleAvatar(
-          radius: 50,
+          radius: screenHeight * .053,
           backgroundColor: Colors.white,
           backgroundImage: FileImage(file),
         );
         photos.add(photo);
       } else {
-        var photo = const CircleAvatar(
-          radius: 50,
+        var photo = CircleAvatar(
+          radius: screenHeight * .053,
           backgroundColor: Colors.white,
-          backgroundImage: AssetImage('assets/images/user.png'),
+          backgroundImage: const AssetImage('assets/images/user.png'),
         );
         photos.add(photo);
       }
@@ -61,9 +61,10 @@ class ContributorsScreen extends StatelessWidget {
     gotoDocsScreen();
   }
 
+  double screenHeight = 1;
   @override
   Widget build(BuildContext context) {
-    double screenHeight = MediaQuery.of(context).size.height;
+    screenHeight = MediaQuery.of(context).size.height;
     double screenWidth = MediaQuery.of(context).size.width;
     return PopScope(
       canPop: false,
@@ -110,6 +111,7 @@ class ContributorsScreen extends StatelessWidget {
                   ),
                 ),
                 SizedBox(
+                  width: screenWidth * .9,
                   height: screenHeight * .75,
                   child: FutureBuilder(
                       future: gettingDetails(),
@@ -133,10 +135,9 @@ class ContributorsScreen extends StatelessWidget {
                           itemCount: contributorsList.length,
                           itemBuilder: (context, index) => FadeInDown(
                             child: Padding(
-                              padding: const EdgeInsets.only(
-                                  left: 20, right: 20, bottom: 20),
+                              padding: const EdgeInsets.only(bottom: 20),
                               child: Container(
-                                height: screenHeight * .13,
+                                height: screenHeight * .145,
                                 decoration: BoxDecoration(
                                   border: Border.all(color: Colors.red),
                                   borderRadius: const BorderRadius.all(
@@ -153,7 +154,7 @@ class ContributorsScreen extends StatelessWidget {
                                       padding: const EdgeInsets.only(
                                           top: 8, bottom: 8),
                                       child: Container(
-                                        height: screenHeight * .2,
+                                        height: screenHeight * .15,
                                         width: 2,
                                         color: Colors.red,
                                       ),
@@ -162,7 +163,7 @@ class ContributorsScreen extends StatelessWidget {
                                       padding: const EdgeInsets.all(8.0),
                                       child: Container(
                                           height: screenHeight * .2,
-                                          width: screenWidth * .59,
+                                          width: screenWidth * .58,
                                           decoration: BoxDecoration(
                                             border:
                                                 Border.all(color: Colors.red),
@@ -172,18 +173,20 @@ class ContributorsScreen extends StatelessWidget {
                                             ),
                                           ),
                                           child: Padding(
-                                            padding: const EdgeInsets.only(
-                                                left: 15, top: 4),
+                                            padding: EdgeInsets.only(
+                                                left: screenWidth * .03,
+                                                top: screenHeight * .008),
                                             child: Column(
                                               crossAxisAlignment:
                                                   CrossAxisAlignment.start,
                                               children: [
                                                 Row(
                                                   children: [
-                                                    const Text(
+                                                    Text(
                                                       'Name : ',
                                                       style: TextStyle(
-                                                        fontSize: 16,
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -191,18 +194,20 @@ class ContributorsScreen extends StatelessWidget {
                                                     Text(
                                                       contributorsList[index][1]
                                                           [0],
-                                                      style: const TextStyle(
-                                                        fontSize: 16,
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                       ),
                                                     ),
                                                   ],
                                                 ),
                                                 Row(
                                                   children: [
-                                                    const Text(
+                                                    Text(
                                                       'Branch : ',
                                                       style: TextStyle(
-                                                        fontSize: 16,
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -210,18 +215,20 @@ class ContributorsScreen extends StatelessWidget {
                                                     Text(
                                                       contributorsList[index][1]
                                                           [1],
-                                                      style: const TextStyle(
-                                                        fontSize: 16,
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                       ),
                                                     ),
                                                   ],
                                                 ),
                                                 Row(
                                                   children: [
-                                                    const Text(
+                                                    Text(
                                                       'Batch : ',
                                                       style: TextStyle(
-                                                        fontSize: 16,
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -229,18 +236,20 @@ class ContributorsScreen extends StatelessWidget {
                                                     Text(
                                                       contributorsList[index][1]
                                                           [2],
-                                                      style: const TextStyle(
-                                                        fontSize: 16,
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                       ),
                                                     ),
                                                   ],
                                                 ),
                                                 Row(
                                                   children: [
-                                                    const Text(
+                                                    Text(
                                                       'Contributions : ',
                                                       style: TextStyle(
-                                                        fontSize: 16,
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                         fontWeight:
                                                             FontWeight.bold,
                                                       ),
@@ -249,8 +258,9 @@ class ContributorsScreen extends StatelessWidget {
                                                       contributorsList[index][1]
                                                               [3]
                                                           .toString(),
-                                                      style: const TextStyle(
-                                                        fontSize: 16,
+                                                      style: TextStyle(
+                                                        fontSize:
+                                                            screenHeight * .019,
                                                       ),
                                                     ),
                                                   ],
