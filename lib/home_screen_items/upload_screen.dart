@@ -368,7 +368,6 @@ class _UploadScreenState extends State<UploadScreen> {
                             // File Type
                             child: Container(
                               height: screenHeight * .075,
-                              padding: const EdgeInsets.all(8.0),
                               decoration: BoxDecoration(
                                 border: Border.all(color: Colors.red),
                                 borderRadius: const BorderRadius.all(
@@ -377,7 +376,7 @@ class _UploadScreenState extends State<UploadScreen> {
                               ),
                               child: Center(
                                 child: SizedBox(
-                                  width: screenWidth * .46,
+                                  width: screenWidth * .5,
                                   child: DropdownButtonFormField(
                                     decoration: const InputDecoration(
                                         enabled: false, labelText: 'File Type'),
@@ -427,7 +426,6 @@ class _UploadScreenState extends State<UploadScreen> {
                                       // Branch
                                       child: Container(
                                         height: screenHeight * .075,
-                                        padding: const EdgeInsets.all(8.0),
                                         decoration: BoxDecoration(
                                           border: Border.all(color: Colors.red),
                                           borderRadius: const BorderRadius.all(
@@ -436,7 +434,7 @@ class _UploadScreenState extends State<UploadScreen> {
                                         ),
                                         child: Center(
                                           child: SizedBox(
-                                            width: screenWidth * .46,
+                                            width: screenWidth * .5,
                                             child: DropdownButtonFormField(
                                               decoration: const InputDecoration(
                                                   enabled: false,
@@ -495,7 +493,6 @@ class _UploadScreenState extends State<UploadScreen> {
                                       // Semester
                                       child: Container(
                                         height: screenHeight * .075,
-                                        padding: const EdgeInsets.all(8.0),
                                         decoration: BoxDecoration(
                                           border: Border.all(color: Colors.red),
                                           borderRadius: const BorderRadius.all(
@@ -504,7 +501,7 @@ class _UploadScreenState extends State<UploadScreen> {
                                         ),
                                         child: Center(
                                           child: SizedBox(
-                                            width: screenWidth * .46,
+                                            width: screenWidth * .5,
                                             child: DropdownButtonFormField(
                                               decoration: const InputDecoration(
                                                   enabled: false,
@@ -579,7 +576,6 @@ class _UploadScreenState extends State<UploadScreen> {
                                       // Year
                                       child: Container(
                                         height: screenHeight * .075,
-                                        padding: const EdgeInsets.all(8.0),
                                         decoration: BoxDecoration(
                                           border: Border.all(color: Colors.red),
                                           borderRadius: const BorderRadius.all(
@@ -588,7 +584,7 @@ class _UploadScreenState extends State<UploadScreen> {
                                         ),
                                         child: Center(
                                           child: SizedBox(
-                                            width: screenWidth * .46,
+                                            width: screenWidth * .5,
                                             child: DropdownButtonFormField(
                                               decoration: const InputDecoration(
                                                   enabled: false,
@@ -647,8 +643,6 @@ class _UploadScreenState extends State<UploadScreen> {
                                                 // Exam
                                                 child: Container(
                                                   height: screenHeight * .075,
-                                                  padding:
-                                                      const EdgeInsets.all(8.0),
                                                   decoration: BoxDecoration(
                                                     border: Border.all(
                                                         color: Colors.red),
@@ -659,7 +653,7 @@ class _UploadScreenState extends State<UploadScreen> {
                                                   ),
                                                   child: Center(
                                                     child: SizedBox(
-                                                      width: screenWidth * .46,
+                                                      width: screenWidth * .5,
                                                       child:
                                                           DropdownButtonFormField(
                                                         decoration:
