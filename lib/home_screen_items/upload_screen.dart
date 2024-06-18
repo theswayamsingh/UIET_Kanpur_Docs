@@ -182,7 +182,7 @@ class _UploadScreenState extends State<UploadScreen> {
             var databaseRef = FirebaseDatabase.instanceFor(
                     app: Firebase.app(),
                     databaseURL:
-                        'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                        <databaseURL>)
                 .ref();
             var usersRef = databaseRef.child('Users/$uid/3');
             var dataSnapshotOfUsers = await usersRef.get();
@@ -233,7 +233,7 @@ class _UploadScreenState extends State<UploadScreen> {
             var databaseRef = FirebaseDatabase.instanceFor(
                     app: Firebase.app(),
                     databaseURL:
-                        'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                        <databaseURL>)
                 .ref();
             var usersRef = databaseRef.child('Users/$uid/3');
             var dataSnapshotOfUsers = await usersRef.get();
