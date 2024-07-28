@@ -180,7 +180,7 @@ class _SignUpScreen extends State<SignUpScreen> {
       var databaseRef = FirebaseDatabase.instanceFor(
               app: Firebase.app(),
               databaseURL:
-                  'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                  '<DATABASE URL>')
           .ref();
       var usersRef = databaseRef.child('Users');
       await usersRef.update({
