@@ -29,7 +29,7 @@ class ContributorsScreen extends StatelessWidget {
     var databaseRef = FirebaseDatabase.instanceFor(
             app: Firebase.app(),
             databaseURL:
-                'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                '<DATABASE URL>')
         .ref('Users');
     var dataSnapshot = await databaseRef.get();
     var usersDict = dataSnapshot.value as Map;
