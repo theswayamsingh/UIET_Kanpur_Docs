@@ -52,7 +52,7 @@ class _ItemsListScreenState extends State<ItemsListScreen> {
     var databaseRef = FirebaseDatabase.instanceFor(
             app: Firebase.app(),
             databaseURL:
-                'https://uiet-kanpur-docs-app-default-rtdb.asia-southeast1.firebasedatabase.app/')
+                '<DATABASE URL>')
         .ref();
     var contributionsRef = databaseRef.child('Contributions/${globals.folder}');
     var contributionsDataSnapshot = await contributionsRef.get();
